@@ -1,0 +1,40 @@
+name: Build MOMENTS WRAP APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get source code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Create Android project files
+        run: flutter create --platforms=android .
+
+      - name: Put app files in Flutter folders
+        run: |
+          mkdir -p lib assets
+          cp main.dart lib/main.dart
+          cp moments_wrap_logo.jpg assets/
+
+      - name: Install packages
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Save APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: moments-wrap-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
