@@ -66,13 +66,12 @@ Product(name: 'Gerbera Bouquet', category: 'Flowers',
   description: 'Gerbera flower bouquet.', price: 199),
 Product(name: 'Birthday Decoration', category: 'Decor',
   description: 'Birthday decoration package.', price: 3149),Product(name: 'Red Rose Bouquet', category: 'Flowers',
-      description: 'Fresh red roses with premium wrapping.', price: 899),
-    Product(name: 'Chocolate Cake', category: 'Cakes',
-      description: 'Rich chocolate cake for special moments.', price: 799),
-    Product(name: 'Gift Hamper', category: 'Hampers',
-      description: 'Beautifully packed premium gift hamper.', price: 1299),
-    Product(name: 'Birthday Decor', category: 'Decor',
-      description: 'Elegant birthday decoration package.', price: 1499),
+    
+      
+    
+      
+    
+    
   ];
 
   final List<Product> cart = [];
