@@ -227,9 +227,11 @@ class ProductCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: const Color(0xFFFFE7EE),
           ),
-          child: const Icon(Icons.card_giftcard, size: 42, color: Color(0xFFFF3F78)),
-        ),
-        const SizedBox(width: 12),
+      child: product.image.isNotEmpty
+    ? Image.asset(product.image, fit: BoxFit.cover)
+    : const Icon(Icons.card_giftcard),
+      
+        
         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(product.name, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
           Text(product.category, style: const TextStyle(color: Colors.grey)),
