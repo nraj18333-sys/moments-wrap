@@ -103,32 +103,29 @@ class MomentsWrapApp extends StatefulWidget {
       price: 699,
       image: 'assets/IMG-20261001-WA0024.jpg',
     ),
-class _MomentsWrapAppState extends State<MomentsWrapApp> {
-  final List<Product> products = [
-    Product(name: 'Red Velvet Temple', category: 'Gifts',
-  description: 'Red velvet gift item.', price: 999),
-Product(name: 'Wooden Night Lamp', category: 'Gifts',
-  description: 'Wooden night lamp gift.', price: 449),
-Product(name: 'Couples Gifts', category: 'Gifts',
-  description: 'Couples gift.', price: 1799),
-Product(name: 'Daughter and Mother Gifts', category: 'Gifts',
-  description: 'Gift for daughter and mother.', price: 1799),
-Product(name: 'Son and Mother Gifts', category: 'Gifts',
-  description: 'Gift for son and mother.', price: 1449),
-Product(name: 'Couple Gifts', category: 'Gifts',
-  description: 'Couple gift.', price: 1449),
-Product(name: 'Cute Couple Gifts', category: 'Gifts',
-  description: 'Cute couple gift.', price: 1190,  image: 'assets/image-1790841428545.jpg'
-Product(name: 'Son and Mother Gifts', category: 'Gifts',
-  description: 'Son and mother gift design.', price: 1799),
-Product(name: 'Pen Stand Apple Design', category: 'Gifts',
-  description: 'Apple design pen stand.', price: 549, image: 'assets/image-1790841374889.jpg',
-Product(name: 'Couple Gift', category: 'Gifts',
-  description: 'Couple gift.', price: 1249),
-Product(name: 'Bangle Ceramic', category: 'Gifts',
-  description: 'Ceramic bangle.', price: 349),
-Product(name: 'Custom Product Hamper', category: 'Hampers',
-  description: 'Shoes or cosmetic product hamper with full customisation. Making charge ₹699 each.', price: 699),
+
+    
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
 Product(name: 'Red Rose Bouquet', category: 'Flowers',
   description: 'Red rose bouquet.', price: 599),
 Product(name: 'Red Rose Bouquet', category: 'Flowers',
@@ -156,7 +153,7 @@ Product(name: 'Birthday Decoration', category: 'Decor',
     
     
   ];
-
+class _MomentsWrapAppState extends State<MomentsWrapApp> {
   final List<Product> cart = [];
   final List<Product> orders = [];
   int tab = 0;
