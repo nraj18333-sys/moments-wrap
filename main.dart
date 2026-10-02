@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-void main() => runApp(const MomentsWrapApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MomentsWrapApp());
+}
+  
+  
+
+
 
 class Product {
   final String name, category, description, image;
