@@ -19,7 +19,10 @@ jobs:
           channel: stable
 
       - name: Create Android project files
-        run: flutter create --platforms=android .
+        run: |
+          cp pubspec.yaml /tmp/pubspec.yaml
+          flutter create --platforms=android .
+           cp /tmp/pubspec.yaml pubspec.yaml
 
       - name: Put app files in Flutter folders
         run: |
