@@ -145,7 +145,7 @@ Product(name: 'Chocolate + Red Rose + Pink Rose Bouquet', category: 'Flowers',
 Product(name: 'Gerbera Bouquet', category: 'Flowers',
   description: 'Gerbera flower bouquet.', price: 199),
 Product(name: 'Birthday Decoration', category: 'Decor',
-  description: 'Birthday decoration package.', price: 3149),Product(name: 'Red Rose Bouquet', category: 'Flowers',
+  description: 'Birthday decoration package.', price: 3149),
     
       
     
