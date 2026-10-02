@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "106892648981",
+    "project_id": "moments-wrap-e567a",
+    "storage_bucket": "moments-wrap-e567a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106892648981:android:2f7c43a84e652ea039641c",
+        "android_client_info": {
+          "package_name": "Com.momentswaap.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIjxXIdXC4ITkDXgu6hCquecT3qEkwgvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106892648981:android:b181ec447b92cec439641c",
+        "android_client_info": {
+          "package_name": "com.momentswrap.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIjxXIdXC4ITkDXgu6hCquecT3qEkwgvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
