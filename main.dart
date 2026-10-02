@@ -19,7 +19,90 @@ class MomentsWrapApp extends StatefulWidget {
   @override
   State<MomentsWrapApp> createState() => _MomentsWrapAppState();
 }
-
+  final List<Product> products = [
+    Product(
+      name: 'Red Velvet Temple',
+      category: 'Gifts',
+      description: 'Red velvet gift item.',
+      price: 999,
+      image: 'assets/image-1790840579849.jpg',
+    ),
+    Product(
+      name: 'Wooden Night Lamp',
+      category: 'Gifts',
+      description: 'Wooden night lamp gift.',
+      price: 449,
+      image: 'assets/image-1790840716118.jpg',
+    ),
+    Product(
+      name: 'Couples Gifts',
+      category: 'Gifts',
+      description: 'Couples gift.',
+      price: 1799,
+      image: 'assets/image-1790840829591.jpg',
+    ),
+    Product(
+      name: 'Daughter and Mother Gifts',
+      category: 'Gifts',
+      description: 'Gift for daughter and mother.',
+      price: 1799,
+      image: 'assets/image-1790840922811.jpg',
+    ),
+    Product(
+      name: 'Son and Mother Gifts',
+      category: 'Gifts',
+      description: 'Gift for son and mother.',
+      price: 1449,
+      image: 'assets/image-1790841236013.jpg',
+    ),
+    Product(
+      name: 'Couple Gifts',
+      category: 'Gifts',
+      description: 'Couple gift.',
+      price: 1449,
+      image: 'assets/image-1790841123687.jpg',
+    ),
+    Product(
+      name: 'Cute Couple Gifts',
+      category: 'Gifts',
+      description: 'Cute couple gift.',
+      price: 1190,
+      image: 'assets/image-1790841428545.jpg',
+    ),
+    Product(
+      name: 'Son and Mother Gifts',
+      category: 'Gifts',
+      description: 'Son and mother gift design.',
+      price: 1799,
+    ),
+    Product(
+      name: 'Pen Stand Apple Design',
+      category: 'Gifts',
+      description: 'Apple design pen stand.',
+      price: 549,
+      image: 'assets/image-1790841374889.jpg',
+    ),
+    Product(
+      name: 'Couple Gift',
+      category: 'Gifts',
+      description: 'Couple gift.',
+      price: 1249,
+      image: 'assets/image-1790841174636.jpg',
+    ),
+    Product(
+      name: 'Bangle Ceramic',
+      category: 'Gifts',
+      description: 'Ceramic bangle.',
+      price: 349,
+      image: 'assets/image-1790841488306.jpg',
+    ),
+    Product(
+      name: 'Custom Product Hamper',
+      category: 'Hampers',
+      description: 'Shoes or cosmetic product hamper with full customisation. Making charge ₹699 each.',
+      price: 699,
+      image: 'assets/IMG-20261001-WA0024.jpg',
+    ),
 class _MomentsWrapAppState extends State<MomentsWrapApp> {
   final List<Product> products = [
     Product(name: 'Red Velvet Temple', category: 'Gifts',
