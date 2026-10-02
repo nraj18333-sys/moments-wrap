@@ -26,7 +26,7 @@ jobs:
           mkdir -p lib assets
           cp main.dart lib/main.dart
           cp moments_wrap_logo.jpg assets/
-
+           cp google-services.json android/app/google-services.json
       - name: Install packages
         run: flutter pub get
 
