@@ -35,7 +35,7 @@ Product(name: 'Son and Mother Gifts', category: 'Gifts',
 Product(name: 'Couple Gifts', category: 'Gifts',
   description: 'Couple gift.', price: 1449),
 Product(name: 'Cute Couple Gifts', category: 'Gifts',
-  description: 'Cute couple gift.', price: 1999),
+  description: 'Cute couple gift.', price: 1999,  image: 'assets/image-1790841428545.jpg'
 Product(name: 'Son and Mother Gifts', category: 'Gifts',
   description: 'Son and mother gift design.', price: 1799),
 Product(name: 'Pen Stand Apple Design', category: 'Gifts',
