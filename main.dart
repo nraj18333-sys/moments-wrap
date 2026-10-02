@@ -309,7 +309,7 @@ class ProductCard extends StatelessWidget {
       child: product.image.isNotEmpty
     ? Image.asset(product.image, fit: BoxFit.cover)
     : const Icon(Icons.card_giftcard),
-      
+     ), 
         
         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(product.name, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
