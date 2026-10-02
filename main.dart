@@ -126,26 +126,25 @@ class MomentsWrapApp extends StatefulWidget {
   
 
   
-Product(name: 'Red Rose Bouquet', category: 'Flowers',
-  description: 'Red rose bouquet.', price: 599),
-Product(name: 'Red Rose Bouquet', category: 'Flowers',
-  description: 'Red rose bouquet.', price: 349),
-Product(name: 'Pink and Yellow Rose Bouquet', category: 'Flowers',
-  description: 'Pink and yellow rose bouquet.', price: 649, image: 'assets/product_2.jpg'),
-Product(name: 'Red Rose Bouquet', category: 'Flowers',
-  description: 'Red rose bouquet.', price: 849),
-Product(name: 'Chocolate + Flower Bouquet', category: 'Flowers',
-  description: 'Chocolate and flower bouquet.', price: 549),
-Product(name: 'Mix Flower Bouquet', category: 'Flowers',
-  description: 'Mix flower bouquet.', price: 199),
-Product(name: 'White Rose Bouquet', category: 'Flowers',
-  description: 'White rose bouquet.', price: 699),
-Product(name: 'Chocolate + Red Rose + Pink Rose Bouquet', category: 'Flowers',
-  description: 'Chocolate with red and pink rose bouquet.', price: 1699),
-Product(name: 'Gerbera Bouquet', category: 'Flowers',
-  description: 'Gerbera flower bouquet.', price: 199),
-Product(name: 'Birthday Decoration', category: 'Decor',
-  description: 'Birthday decoration package.', price: 3149),
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
     
       
     
