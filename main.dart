@@ -164,14 +164,37 @@ class MomentsWrapApp extends StatefulWidget {
   ];
 class _MomentsWrapAppState extends State<MomentsWrapApp> {
   @override
-void initState() {
-  ...
-}
-
-Future<void> _loadProducts() async {
-  ...
+    @override
+  void initState() {
+    super.initState();
+    _loadProducts();
   }
-  final List<Product> cart = [];
+
+  Future<void> _loadProducts() async {
+    final snapshot =
+        await FirebaseFirestore.instance.collection('products').get();
+
+    if (snapshot.docs.isEmpty) return;
+
+    setState(() {
+      products
+        ..clear()
+        ..addAll(
+          snapshot.docs.map((doc) {
+            final data = doc.data();
+
+            return Product(
+              name: data['name'] ?? '',
+              category: data['category'] ?? 'Gifts',
+              description: data['description'] ?? '',
+              price: data['price'] ?? 0,
+              image: data['image'] ?? '',
+            );
+          }),
+        );
+    });
+  }
+final List<Product> cart = [];
   final List<Product> orders = [];
   int tab = 0;
 
