@@ -191,6 +191,14 @@ Future<void> _loadProducts() async {
     
   ];
 class _MomentsWrapAppState extends State<MomentsWrapApp> {
+  @override
+void initState() {
+  ...
+}
+
+Future<void> _loadProducts() async {
+  ...
+  }
   final List<Product> cart = [];
   final List<Product> orders = [];
   int tab = 0;
