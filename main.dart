@@ -173,7 +173,23 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
     final snapshot =
         await FirebaseFirestore.instance.collection('products').get();
 
-    if (snapshot.docs.isEmpty) return;
+    if (snapshot.docs.isEmpty) {
+  final batch = FirebaseFirestore.instance.batch();
+  final ref = FirebaseFirestore.instance.collection('products');
+
+  for (final p in products) {
+    batch.set(ref.doc(), {
+      'name': p.name,
+      'category': p.category,
+      'description': p.description,
+      'price': p.price,
+      'image': p.image,
+    });
+  }
+
+  await batch.commit();
+  return;
+    }
 
     setState(() {
       products
