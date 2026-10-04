@@ -272,13 +272,37 @@ final List<Product> cart = [];
   }
 
   void _checkout() {
-    if (cart.isEmpty) return;
-    setState(() {
-      orders.addAll(cart);
-      cart.clear();
-      tab = 3;
+  if (cart.isEmpty) return;
+
+  final batch = FirebaseFirestore.instance.batch();
+  final ref = FirebaseFirestore.instance.collection('orders');
+
+  for (final p in cart) {
+    batch.set(ref.doc(), {
+      'name': p.name,
+      'category': p.category,
+      'description': p.description,
+      'price': p.price,
+      'image': p.image,
+      'status': 'Processing',
+      'createdAt': FieldValue.serverTimestamp(),
     });
   }
+
+  batch.commit();
+
+  setState(() {
+    orders.addAll(cart);
+    cart.clear();
+    tab = 3;
+  });
+  }
+  
+
+    
+      
+    
+  
 }
 
 class Header extends StatelessWidget {
