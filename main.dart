@@ -167,8 +167,9 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
   void initState() {
     super.initState();
     _loadProducts();
+    _loadOrders();
   }
-  _loadOrders();
+  
 
   Future<void> _loadProducts() async {
     final snapshot =
