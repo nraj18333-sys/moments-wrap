@@ -211,6 +211,28 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
   }
 final List<Product> cart = [];
   final List<Product> orders = [];
+  Future<void> _loadOrders() async {
+  final snapshot =
+      await FirebaseFirestore.instance.collection('orders').get();
+
+  setState(() {
+    orders
+      ..clear()
+      ..addAll(
+        snapshot.docs.map((doc) {
+          final data = doc.data();
+
+          return Product(
+            name: data['name'] ?? '',
+            category: data['category'] ?? 'Gifts',
+            description: data['description'] ?? '',
+            price: data['price'] ?? 0,
+            image: data['image'] ?? '',
+          );
+        }),
+      );
+  });
+  }
   int tab = 0;
 
   void addToCart(Product p) {
