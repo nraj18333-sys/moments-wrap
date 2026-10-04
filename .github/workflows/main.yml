@@ -23,9 +23,11 @@ jobs:
           cp pubspec.yaml /tmp/pubspec.yaml
           flutter create --platforms=android .
            cp /tmp/pubspec.yaml pubspec.yaml
-            - name: Configure Firebase
+      
+      - name: Configure Firebase
         run: |
-          find android -name "settings.gradle*" -o -name "build.gradle*" 
+          find android -name "settings.gradle*"
+   
       
         
     
