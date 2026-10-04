@@ -253,7 +253,20 @@ final List<Product> cart = [];
       case 1: return ProductsPage(products: products, onAdd: addToCart);
       case 2: return CartPage(cart: cart, onCheckout: _checkout);
       case 3: return OrdersPage(orders: orders);
-      case 4: return AdminPage(onAdd: (p) => setState(() => products.add(p)));
+      case 4:
+  return AdminPage(
+    onAdd: (p) {
+      setState(() => products.add(p));
+
+      FirebaseFirestore.instance.collection('products').add({
+        'name': p.name,
+        'category': p.category,
+        'description': p.description,
+        'price': p.price,
+        'image': p.image,
+      });
+    },
+  );
       default: return HomePage(products: products, onAdd: addToCart);
     }
   }
