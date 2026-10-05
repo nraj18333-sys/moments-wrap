@@ -31,9 +31,9 @@ class MomentsWrapApp extends StatefulWidget {
 
   final List<Product> products = [
   Product(
-    name: 'Red Velvet Temple',
+    name: 'Red welvet Temple',
     category: 'Gifts',
-    description: 'Red velvet gift item.',
+    description: 'Red welvet gift item.',
     price: 999,
     image: 'assets/image-1790840579849.jpg',
   ),
