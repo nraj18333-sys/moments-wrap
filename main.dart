@@ -353,7 +353,9 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
 final List<Product> cart = [];
   final List<Product> orders = [];
   Future<void> _loadOrders() async {
-  final snapshot =
+  try {
+    final snapshot =
+        await FirebaseFirestore.instance.collection('orders').get();
       await FirebaseFirestore.instance.collection('orders').get();
 
   setState(() {
