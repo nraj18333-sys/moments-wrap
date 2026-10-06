@@ -237,7 +237,7 @@ class MomentsWrapApp extends StatefulWidget {
       
     
     
-  ];
+  
 class _MomentsWrapAppState extends State<MomentsWrapApp> {
     @override
   void initState() {
