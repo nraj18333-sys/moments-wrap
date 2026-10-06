@@ -254,7 +254,8 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
   
 
   Future<void> _loadProducts() async {
-  final snapshot =
+  try {
+    final snapshot =
       await FirebaseFirestore.instance.collection('products').get();
 
   // आपकी main.dart वाली पूरी product list हमेशा ऐप में रहेगी
@@ -306,7 +307,11 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
     products
       ..clear()
       ..addAll(mergedProducts);
-  });
+      });
+
+  } catch (e) {
+    debugPrint('Products loading error: $e');
+  }
   }
   
         
