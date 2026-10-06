@@ -248,45 +248,97 @@ class _MomentsWrapAppState extends State<MomentsWrapApp> {
   
 
   Future<void> _loadProducts() async {
-    final snapshot =
-        await FirebaseFirestore.instance.collection('products').get();
+  final snapshot =
+      await FirebaseFirestore.instance.collection('products').get();
 
-    if (snapshot.docs.isEmpty) {
-  final batch = FirebaseFirestore.instance.batch();
+  // आपकी main.dart वाली पूरी product list हमेशा ऐप में रहेगी
+  final List<Product> mergedProducts = List<Product>.from(products);
+
+  // Firebase में जो नए/custom products हैं, उन्हें भी जोड़ें
+  for (final doc in snapshot.docs) {
+    final data = doc.data();
+    final name = data['name'] ?? '';
+
+    final alreadyExists =
+        mergedProducts.any((p) => p.name == name);
+
+    if (!alreadyExists) {
+      mergedProducts.add(
+        Product(
+          name: name,
+          category: data['category'] ?? 'Gifts',
+          description: data['description'] ?? '',
+          price: data['price'] ?? 0,
+          image: data['image'] ?? '',
+        ),
+      );
+    }
+  }
+
+  // नई products को Firebase में भी save करें
   final ref = FirebaseFirestore.instance.collection('products');
+  final batch = FirebaseFirestore.instance.batch();
 
   for (final p in products) {
-    batch.set(ref.doc(), {
-      'name': p.name,
-      'category': p.category,
-      'description': p.description,
-      'price': p.price,
-      'image': p.image,
-    });
+    final existsInFirebase =
+        snapshot.docs.any((doc) => doc.data()['name'] == p.name);
+
+    if (!existsInFirebase) {
+      batch.set(ref.doc(), {
+        'name': p.name,
+        'category': p.category,
+        'description': p.description,
+        'price': p.price,
+        'image': p.image,
+      });
+    }
   }
 
   await batch.commit();
-  return;
-    }
 
-    setState(() {
-      products
-        ..clear()
-        ..addAll(
-          snapshot.docs.map((doc) {
-            final data = doc.data();
-
-            return Product(
-              name: data['name'] ?? '',
-              category: data['category'] ?? 'Gifts',
-              description: data['description'] ?? '',
-              price: data['price'] ?? 0,
-              image: data['image'] ?? '',
-            );
-          }),
-        );
-    });
+  setState(() {
+    products
+      ..clear()
+      ..addAll(mergedProducts);
+  });
   }
+  
+        
+
+    
+  
+
+  
+  
+    
+    
+      
+      
+      
+    
+  
+
+  
+
+  
+
+  
+      
+        
+        
+          
+            
+
+          
+              
+              
+          
+            
+            
+          
+        
+    
+  
 final List<Product> cart = [];
   final List<Product> orders = [];
   Future<void> _loadOrders() async {
