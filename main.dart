@@ -375,6 +375,9 @@ final List<Product> cart = [];
         }),
       );
   });
+    } catch (e) {
+    debugPrint('Orders loading error: $e');
+  }
   }
   int tab = 0;
 
