@@ -356,7 +356,7 @@ final List<Product> cart = [];
   try {
     final snapshot =
         await FirebaseFirestore.instance.collection('orders').get();
-      await FirebaseFirestore.instance.collection('orders').get();
+      
 
   setState(() {
     orders
